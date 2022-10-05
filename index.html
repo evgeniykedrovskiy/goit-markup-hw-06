@@ -411,12 +411,19 @@
         </ul>
       </div>
       <div class="mailing">
-        <p>Підпишіться на розсилку</p>
+        <p class="mailing-caption">Підпишіться на розсилку</p>
         <form class="mailing-form">
           <label class="mailing-name">
-            <input type="post" class="mailing-form-input" placeholder="E-mail" />
+            <input type="post" name="user_mail" class="mailing-form-input" placeholder="E-mail" />
           </label>
-          <button type="submit">Підписатися</button>
+          <button type="submit" class="mailing-btn">
+            <div class="mailing-form-grup">
+              <span>Підписатися</span>
+              <svg class="mailing-form-icon" width="24" height="24">
+                <use href="./images/icons.svg#iconsend"></use>
+              </svg>
+            </div>
+          </button>
         </form>
       </div>
     </footer>
@@ -427,30 +434,30 @@
         <form class="modal-form">
           <label class="modal-form-field">
             <span class="modal-form-field-desc">Ім'я</span>
-            <div class="modal-form-input-wrapper">
+            <span class="modal-form-input-wrapper">
               <input name="user_name" type="text" class="modal-form-input" />
               <svg class="modal-form-icon">
                 <use href="./images/icons.svg#icon-personblack"></use>
               </svg>
-            </div>
+            </span>
           </label>
           <label class="modal-form-field">
             <span class="modal-form-field-desc">Телефон</span>
-            <div class="modal-form-input-wrapper">
+            <span class="modal-form-input-wrapper">
               <input name="user_phone_number" type="tel" class="modal-form-input" />
               <svg class="modal-form-icon">
                 <use href="./images/icons.svg#icon-phoneblack"></use>
               </svg>
-            </div>
+            </span>
           </label>
           <label class="modal-form-field">
             <span class="modal-form-field-desc">Пошта</span>
-            <div class="modal-form-input-wrapper">
+            <span class="modal-form-input-wrapper">
               <input name="user_post" type="post" class="modal-form-input" />
               <svg class="modal-form-icon">
                 <use href="./images/icons.svg#icon-emailblack"></use>
               </svg>
-            </div>
+            </span>
           </label>
           <label class="modal-form-field">
             <span class="modal-form-field-desc">Коментар</span>
@@ -461,8 +468,12 @@
             ></textarea>
           </label>
           <label class="modal-form-check-wrapper">
-            <input name="user_policy" type="checkbox" class="modal-form-check" />
-            Погоджуюся з розсилкою та приймаю <a href="#">Умови договору</a>
+            <input name="user_policy" type="checkbox" class="modal-form-check visually-hidden" />
+            <svg class="modal-form-own-check" width="16" height="15">
+              <use class="modal-form-own-check-icon" href="./images/icons.svg#modalcheck"></use>
+            </svg>
+            Погоджуюся з розсилкою та приймаю&nbsp;
+            <a class="modal-form-own-check-link" href="#">Умови договору</a>
           </label>
           <button type="submit" class="modal-form-btn">Відправити</button>
         </form>
